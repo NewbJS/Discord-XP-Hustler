@@ -10,7 +10,7 @@ time.sleep(0.3)
 
 #x:1521 y:1036 screen:0 window:33554440
 
-def messageShit():
+def message():
     pyautogui.click(x=1521, y=1036)
     time.sleep(0.25)
     pyautogui.typewrite(whatToType + " This message was sent on " + time.asctime() + ". The next message will be sent in " + str(howFast) + " seconds.")
@@ -21,8 +21,8 @@ def messageShit():
 if howMany.lower() == "f":
     print("Messaging '" + whatToType + "' every " + howFast + " seconds, forever.")
     while True:
-        messageShit()
+        message()
 else:
     print("Messaging '" + whatToType + "' every " + howFast + " seconds " + howMany + " times.")
     for i in range(int(howMany)):
-        messageShit()
+        message()
